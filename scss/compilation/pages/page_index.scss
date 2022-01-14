@@ -1,0 +1,190 @@
+/*/////////////////PAGE INDEX/////////////////*/
+main {
+    @media #{$large-up} {
+      display: flex;
+      background-color: $grey;
+    }
+  }
+  
+  #container-main {
+    @media #{$large-up}{
+    transform: scale(0.9);
+    z-index: 9;
+    margin-left : 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    top : 90px;
+    h2{
+      margin: 10px 0px;
+    }
+    .section-two_filter{
+      margin: 25px 40px;
+    }
+    }
+  }
+  .container-left {
+    @media #{$large-up} {
+      position: relative;
+      background: white;
+      border-radius: 47px;
+      padding-bottom: 25px;
+      &:before {
+        content: "";
+        position: absolute;
+        margin: -4px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(147, 86, 220);
+        background: linear-gradient(
+          140deg,
+          rgba(147, 86, 220, 0.7) 0%,
+          rgba(255, 121, 218, 0.5) 100%
+        );
+        z-index: -1;
+        @include shadow;
+        border-radius: 47px 47px 50px 50px;
+      }
+    }
+  }
+  
+  /*/////////Section One Localisation/Reservation///////*/
+  
+  .section-one {
+    &_localisation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(
+        0deg,
+        rgba(234, 234, 234, 1) 0%,
+        rgba(234, 234, 234, 1) 83%,
+        rgba(215, 214, 214, 1) 100%
+      );
+      color: #4b4b4b;
+      i {
+        padding: 0.5em;
+      }
+      @media #{$large-up}{
+      border-radius: 43px 43px 0px 0px;}
+    }
+    &_reservation {
+      background-color: $grey;
+      text-align: center;
+      padding: 1em 3em;
+      h1 {
+        font-weight: 300;
+        font-size: 1rem;
+      }
+      &_button {
+        display: inline-block;
+      }
+      @media screen and (min-width: 1200px) {
+        background-color: white;
+      }
+    }
+  }
+  
+  /*///////////Section Two Fonctionnement///////*/
+  
+  .section-two {
+    &_filter {
+      width: 80%;
+      height: 70px;
+      margin: 40px auto;
+      display: flex;
+      align-items: center;
+      @include shadow;
+      border-radius: 40px;
+      background-color: $grey;
+      position: relative;
+      i {
+        width: 20%;
+        padding-left: 0.9em;
+        text-align: center;
+        color: #7e7e7e;
+      }
+      &_number {
+        background-color: $primary;
+        color: white;
+        height: 2em;
+        width: 2em;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -15px;
+      }
+    }
+  }
+  
+  /*///////////Section Three MENU CARDS///////*/
+  .section-three {
+    background-color: $grey;
+    padding: 30px 0;
+    &_cardcontainer {
+      width: 85%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &_card {
+      height: 250px;
+      width: 300px;
+      
+      flex-grow: 0.4;
+      
+      margin: 0% 2% 6% 2%;
+      @include border-rad-20;
+      @include shadow;
+      > a{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+      }
+      
+      &_img {
+        height: 70%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0px 0px;
+        }
+      }
+      &_body {
+        height: 30%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+        align-items: center;
+        border-radius: 0px 0px 20px 20px;
+        line-height: 1.5;
+        /*padding : 0.2em 0em 0.2em 0.3em ;*/
+        p,
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+        p {
+          font-size: 0.8rem;
+          font-weight: 300;
+        }
+        i {
+          font-size: 1.5em;
+        }
+      }
+    }
+    @media #{$large-up}{
+      h2{
+        text-align: center;
+      }
+    }
+  }
+  

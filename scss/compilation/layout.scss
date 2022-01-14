@@ -1,0 +1,48 @@
+/*//////////////Header//////////////////*/
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.header_arrow {
+  font-size: 1.5rem;
+  position: absolute;
+  margin-left: 25px;
+}
+
+.header_logo {
+  width: 50%;
+  max-width: 350px;
+  margin: 20px auto;
+  img {
+    width: 100%;
+  }
+}
+
+/*//////////////Footer//////////////////*/
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 1px 50px 20px 50px;
+  h2 {
+    font-family: "shrikhand";
+    font-size: 1rem;
+  }
+  ul {
+    line-height: 1.6em;
+  }
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}

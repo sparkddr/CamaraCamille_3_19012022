@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Roboto', sans-serif;;
+}
+
+a{
+    all: unset;
+    color: default;
+    cursor: pointer;
+}
+
+a:visited{
+    all : none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+
+h3{
+    font-size: 1.0rem;
+    font-weight : 500;
+}
+
+section h2{
+    padding-left: 1em;
+}
+
+.button{
+    color: white;
+        padding: 1em;
+        margin: 1em 0;
+        background: $primary;
+        background: linear-gradient(355deg, $primary 0%, $secondary 100%);
+        border-radius: 40px;
+        @include shadow;
+}
