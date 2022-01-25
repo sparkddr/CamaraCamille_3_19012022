@@ -3,6 +3,7 @@
 header {
   display: flex;
   align-items: center;
+  background: white;
 }
 
 .header_arrow {
@@ -24,13 +25,34 @@ header {
 footer {
   color: white;
   background-color: #353535;
-  padding: 1px 50px 20px 50px;
+  padding: 10px 50px 20px 30px;
+  @media #{$small-up}{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
   h2 {
     font-family: "shrikhand";
     font-size: 1rem;
+    @media #{$small-up} {
+      font-size: 2rem ;
+      text-align: center;
+      margin-bottom: 50px;
+      
+    }
   }
   ul {
     line-height: 1.6em;
+    @media #{$small-up}{
+      display: flex;
+      justify-content: space-around;
+      align-self: center;
+      width: 100%;
+    }
+    @media #{$large-up} {
+      width: 70%;
+    }
   }
   li {
     a {

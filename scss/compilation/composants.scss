@@ -1,0 +1,80 @@
+
+
+
+
+
+.button {
+  color: white;
+  padding: 1em;
+  margin: 1em 0;
+  position: relative;
+  background: $primary;
+  background: linear-gradient(355deg, $primary 0%, $secondary 100%);
+  border-radius: 40px;
+  @include shadow;
+  transition: all 500ms;
+  z-index: 1;
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 900ms;
+    background: linear-gradient(
+      355deg,
+      $light-primary 0%,
+      $light-secondary 100%
+    );
+    border-radius: 40px;
+    @include shadow-plus;
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: relative;
+  overflow: hidden;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--full {
+    position: absolute;
+    background: linear-gradient(355deg, $primary 0%, $secondary 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: 25% 25%;
+    color: transparent;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all 700ms;
+    &:hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+
+.nouveau{
+  &::after {
+    content: "Nouveau";
+    background-color: $tertiary;
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-align: center;
+    padding: 0.4em 0.2em;
+    color: darken($tertiary, 40%);
+    font-size: 0.8rem;
+  }
+}

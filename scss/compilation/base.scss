@@ -5,13 +5,9 @@
 
 a{
     all: unset;
-    color: default;
     cursor: pointer;
 }
 
-a:visited{
-    all : none;
-}
 
 ul{
     list-style: none;
@@ -30,16 +26,11 @@ h3{
     font-weight : 500;
 }
 
+h4{
+    font-weight: 400;
+}
+
 section h2{
     padding-left: 1em;
 }
 
-.button{
-    color: white;
-        padding: 1em;
-        margin: 1em 0;
-        background: $primary;
-        background: linear-gradient(355deg, $primary 0%, $secondary 100%);
-        border-radius: 40px;
-        @include shadow;
-}

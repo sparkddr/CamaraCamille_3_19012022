@@ -3,8 +3,14 @@ $secondary : #FF79DA ;
 $tertiary :#99E2D0 ; 
 $grey : #f6f6f6 ; 
 
+$light-primary : lighten($primary,7% );
+$light-secondary : lighten($secondary,7% );
 
-$desktop : 1200px;
+
+$desktop : 1250px;
+$mobile : 536px;
+
+$small-up : "screen and (min-width : #{$mobile})";
 
 $large-up : "screen and (min-width: #{$desktop})";
 $large-down :" screen and (max-width: #{$desktop})";
